@@ -1,0 +1,16 @@
+name: Pipeline CI
+
+on: [push]
+
+jobs:
+  pruebas:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Clonar el repositorio
+      uses: actions/checkout@v3
+    - name: Configurar .NET
+      uses: actions/setup-dotnet@v3
+      with:
+        dotnet-version: '10.0.x'
+    - name: Ejecutar programa y pruebas
+      run: dotnet run
