@@ -5,7 +5,7 @@ class Program
     static void Main()
     {
         // función principal
-        Func<int, int, int> sumar = (a, b) => a + b;
+        Func<int, int, int> sumar = (a, b) => a - b;
 
         // prueba automática
         int resultado = sumar(2, 3);
